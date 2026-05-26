@@ -13,6 +13,7 @@ config.php
 /styles/site.min.css
 /node_modules/
 /vendor/
+/.phpunit.cache/
 .DS_Store
 Thumbs.db
 
