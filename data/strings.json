@@ -1,0 +1,6 @@
+{
+  "site_tagline": { "en": "A small site, built right.", "th": "เว็บไซต์ขนาดเล็ก ทำอย่างถูกต้อง" },
+  "home_title":   { "en": "Welcome",                    "th": "ยินดีต้อนรับ" },
+  "home_lead":    { "en": "This is your new microsite.","th": "นี่คือเว็บไซต์ใหม่ของคุณ" },
+  "nav_home":     { "en": "Home",                       "th": "หน้าแรก" }
+}
