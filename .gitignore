@@ -1,0 +1,20 @@
+config.php
+/data/backups/*
+!/data/backups/.gitkeep
+/data/cache/*
+!/data/cache/.gitkeep
+/data/stats/*
+!/data/stats/.gitkeep
+/data/uploads/*
+!/data/uploads/.gitkeep
+/data/audit.jsonl
+/data/.rate-limit.json
+/data/.first-run
+/styles/site.min.css
+/node_modules/
+/vendor/
+.DS_Store
+Thumbs.db
+
+# Exclude superpowers spec/plan work-product from sync (the docs/ folder itself is tracked)
+docs/superpowers/
