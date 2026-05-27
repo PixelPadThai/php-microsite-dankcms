@@ -156,6 +156,40 @@ function stringsEditor() {
   };
 }
 
+function backupsView() {
+  return {
+    toast: '',
+    toastClass: '',
+    _toastId: 0,
+    async restore(name) {
+      if (!confirm('Restore ' + name + '?\nCurrent file is backed up first.')) return;
+      try {
+        const res = await fetch('/dashboard/api/restore-backup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': (window.MSD && window.MSD.csrf) || '',
+          },
+          body: JSON.stringify({ name }),
+        });
+        const j = await res.json().catch(() => ({}));
+        if (!res.ok || !j.ok) throw new Error(j.error || ('HTTP ' + res.status));
+        this._toast('Restored. Reloading…', 'toast-success');
+        setTimeout(() => location.reload(), 800);
+      } catch (e) {
+        this._toast('Error: ' + e.message, 'toast-error');
+      }
+    },
+    _toast(msg, cls) {
+      const id = ++this._toastId;
+      this.toast = msg;
+      this.toastClass = cls || '';
+      setTimeout(() => { if (this._toastId === id) this.toast = ''; }, 3200);
+    },
+  };
+}
+
 document.addEventListener('alpine:init', () => {
   Alpine.data('stringsEditor', stringsEditor);
+  Alpine.data('backupsView', backupsView);
 });
