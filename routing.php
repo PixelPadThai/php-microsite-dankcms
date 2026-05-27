@@ -20,5 +20,6 @@ return [
     '#^/dashboard/api/restore-backup$#'      => 'dashboard/api/restore-backup.php',
     '#^/dashboard(?:/(?<view>[\w-]+))?$#'    => 'dashboard/index.php',
     '#^/sitemap\.xml$#'              => 'pages/sitemap.php',
+    '#^/og/(?<hash>[0-9a-f]{32})\.png$#' => 'pages/og-image.php',
     '#^/health\.json$#'              => 'health.php',
 ];

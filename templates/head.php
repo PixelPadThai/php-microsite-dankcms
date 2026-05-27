@@ -7,6 +7,9 @@ $description = $pageDescription ?? ($cms->str('site_tagline') ?? '');
 $baseUrl = rtrim(defined('SITE_URL') ? SITE_URL : '', '/');
 $canonical = $baseUrl . ($_SERVER['REQUEST_URI'] ?? '/');
 $ogImage = $pageImage ?? ($cms->setting('logo') ?: '');
+if ($ogImage === '') {
+    $ogImage = Seo::ogImageUrlFor($title, $brandPrimary, dirname(__DIR__) . '/data/cache/og');
+}
 if ($ogImage !== '' && $ogImage[0] === '/') $ogImage = $baseUrl . $ogImage;
 $ogType = $pageType ?? 'website';
 ?>
