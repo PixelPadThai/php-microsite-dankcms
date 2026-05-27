@@ -23,3 +23,6 @@ docs/superpowers/
 # Inspiration reference folders (local-only design references; not part of the template)
 /!.Inspiration_*/
 /KICKOFF-PROMPT.md
+
+# Dashboard dev aids (typed-form demo etc.) — local-only
+/dashboard/views/_dev/
