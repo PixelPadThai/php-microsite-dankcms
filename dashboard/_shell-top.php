@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="csrf-token" content="<?= htmlspecialchars($csrf) ?>">
 <title>Dashboard · <?= htmlspecialchars($cms->setting('site_name') ?? '') ?></title>
+<style><?= Theme::cssScaleFromHex($cms->setting('brand_primary') ?? '#0CC4B4') ?></style>
 <link rel="stylesheet" href="/styles/site.css">
 <link rel="stylesheet" href="/styles/dashboard.css">
 <script src="/assets/js/alpine.min.js" defer></script>
