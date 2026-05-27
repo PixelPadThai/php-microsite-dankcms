@@ -19,3 +19,7 @@ Thumbs.db
 
 # Exclude superpowers spec/plan work-product from sync (the docs/ folder itself is tracked)
 docs/superpowers/
+
+# Inspiration reference folders (local-only design references; not part of the template)
+/!.Inspiration_*/
+/KICKOFF-PROMPT.md
