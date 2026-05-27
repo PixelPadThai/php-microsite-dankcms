@@ -12,6 +12,8 @@ return [
     '#^/dashboard/login$#'                   => 'dashboard/login.php',
     '#^/dashboard/api/save-strings$#'        => 'dashboard/api/save-strings.php',
     '#^/dashboard/api/save-content$#'        => 'dashboard/api/save-content.php',
+    '#^/dashboard/api/preview-theme$#'       => 'dashboard/api/preview-theme.php',
+    '#^/dashboard/api/manage-languages$#'    => 'dashboard/api/manage-languages.php',
     '#^/dashboard/api/restore-backup$#'      => 'dashboard/api/restore-backup.php',
     '#^/dashboard(?:/(?<view>[\w-]+))?$#'    => 'dashboard/index.php',
     '#^/health\.json$#'              => 'health.php',

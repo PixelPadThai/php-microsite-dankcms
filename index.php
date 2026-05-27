@@ -52,4 +52,12 @@ if (!$matched) {
 
 if (!empty($params['lang'])) $cms->setLang($params['lang']);
 
+$isDashboard  = strpos($requestUri, '/dashboard') === 0;
+$isHealth     = $requestUri === '/health.json';
+$maintenance  = (bool) $cms->setting('_maintenance');
+if ($maintenance && !$isDashboard && !$isHealth) {
+    require __DIR__ . '/pages/maintenance.php';
+    exit;
+}
+
 require __DIR__ . '/' . $matched;

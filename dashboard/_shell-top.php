@@ -13,6 +13,7 @@
 <script src="/assets/js/dashboard.js" defer></script>
 <script src="/assets/js/typedForm.js" defer></script>
 <script src="/assets/js/contentEditor.js" defer></script>
+<script src="/assets/js/settingsView.js" defer></script>
 </head>
 <body class="dash-body" x-data="{}">
 <aside class="dash-sidebar">

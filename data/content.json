@@ -12,6 +12,7 @@
       "logo":          { "type": "image" },
       "brand_primary": { "type": "color", "default": "#0CC4B4" },
       "contact_email": { "type": "email" },
+      "_maintenance":  { "type": "boolean", "default": false },
       "social": { "type": "object", "fields": {
         "facebook":  { "type": "url" },
         "instagram": { "type": "url" }
@@ -29,6 +30,7 @@
     "logo": "",
     "brand_primary": "#0CC4B4",
     "contact_email": "",
+    "_maintenance": false,
     "social": { "facebook": "", "instagram": "" }
   },
   "collections": {
