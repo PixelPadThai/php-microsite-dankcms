@@ -8,7 +8,9 @@
 return [
     '#^/$#'                          => 'pages/home.php',
     '#^/(?<lang>th)$#'                => 'pages/home.php',
-    '#^/dashboard(?:/(?<view>[\w-]+))?(?:/(?<action>[\w-]+))?$#' => 'dashboard/index.php',
+    '#^/dashboard/logout$#'                  => 'dashboard/logout.php',
+    '#^/dashboard/login$#'                   => 'dashboard/login.php',
     '#^/dashboard/api/(?<endpoint>[\w-]+)$#' => 'dashboard/api/router.php',
+    '#^/dashboard(?:/(?<view>[\w-]+))?$#'    => 'dashboard/index.php',
     '#^/health\.json$#'              => 'health.php',
 ];
