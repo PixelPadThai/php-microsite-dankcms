@@ -19,5 +19,6 @@ return [
     '#^/dashboard/api/list-media$#'          => 'dashboard/api/list-media.php',
     '#^/dashboard/api/restore-backup$#'      => 'dashboard/api/restore-backup.php',
     '#^/dashboard(?:/(?<view>[\w-]+))?$#'    => 'dashboard/index.php',
+    '#^/sitemap\.xml$#'              => 'pages/sitemap.php',
     '#^/health\.json$#'              => 'health.php',
 ];
