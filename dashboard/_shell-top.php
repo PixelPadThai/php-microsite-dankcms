@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="/styles/dashboard.css">
 <script src="/assets/js/alpine.min.js" defer></script>
 <script src="/assets/js/dashboard-init.js"></script>
+<script src="/assets/js/dashboard.js" defer></script>
 </head>
 <body class="dash-body" x-data="{}">
 <aside class="dash-sidebar">

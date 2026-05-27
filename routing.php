@@ -10,6 +10,7 @@ return [
     '#^/(?<lang>th)$#'                => 'pages/home.php',
     '#^/dashboard/logout$#'                  => 'dashboard/logout.php',
     '#^/dashboard/login$#'                   => 'dashboard/login.php',
+    '#^/dashboard/api/save-strings$#'        => 'dashboard/api/save-strings.php',
     '#^/dashboard/api/(?<endpoint>[\w-]+)$#' => 'dashboard/api/router.php',
     '#^/dashboard(?:/(?<view>[\w-]+))?$#'    => 'dashboard/index.php',
     '#^/health\.json$#'              => 'health.php',
