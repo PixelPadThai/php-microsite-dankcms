@@ -21,4 +21,7 @@ final class CMS
     public function collection(string $name): adapters\CollectionQuery {
         return $this->adapter->collection($name);
     }
+    public function image(string $url, array $opts = []): string {
+        return ImageHelper::render($url, $opts, dirname(__DIR__));
+    }
 }

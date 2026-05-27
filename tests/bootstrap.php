@@ -4,5 +4,6 @@ spl_autoload_register(function (string $class): void {
     if (is_file($path)) require_once $path;
 });
 define('DATA_DIR', dirname(__DIR__) . '/tests/fixtures');
+define('DATA_SOURCE', 'json');
 define('ADMIN_PASSWORD_HASH', password_hash('test', PASSWORD_DEFAULT));
 define('ADMIN_IP_ALLOWLIST', []);
