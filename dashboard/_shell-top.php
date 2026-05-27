@@ -15,6 +15,7 @@
 <script src="/assets/js/contentEditor.js" defer></script>
 <script src="/assets/js/settingsView.js" defer></script>
 <script src="/assets/js/mediaLibrary.js" defer></script>
+<script src="/assets/js/imagePicker.js" defer></script>
 </head>
 <body class="dash-body" x-data="{}">
 <aside class="dash-sidebar">

@@ -25,6 +25,8 @@ $refOptions = [];
   <?php endforeach; ?>
 </datalist>
 
+<?php require __DIR__ . '/_partials/image-picker.php'; ?>
+
 <div class="settings-page" x-cloak>
 
   <!-- Site basics ============================================== -->

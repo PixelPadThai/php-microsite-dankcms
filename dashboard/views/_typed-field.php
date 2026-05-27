@@ -89,13 +89,20 @@
     </div>
   </template>
 
-  <!-- image (Phase 2 wires a picker later; for now show URL field) -->
+  <!-- image: URL input + thumbnail preview + Pick button (opens global modal) -->
   <template x-if="def.type === 'image'">
-    <input type="text"
-           class="tf-input"
-           :value="getField(path) ?? ''"
-           @input="setField(path, $event.target.value)"
-           placeholder="/uploads/...">
+    <div class="tf-image">
+      <div class="tf-image__preview" x-show="(getField(path) ?? '') !== ''">
+        <img :src="getField(path)" :alt="name" loading="lazy">
+      </div>
+      <input type="text"
+             class="tf-input tf-image__url"
+             :value="getField(path) ?? ''"
+             @input="setField(path, $event.target.value)"
+             placeholder="/data/uploads/...">
+      <button type="button" class="btn tf-image__pick"
+              @click="MSD.imagePicker.open().then(url => { if (url !== null) setField(path, url); })">Pick…</button>
+    </div>
   </template>
 
   <!-- select -->
@@ -186,10 +193,17 @@
               </div>
             </template>
             <template x-if="def.type === 'image'">
-              <input type="text" class="tf-input"
-                     :value="getField(path) ?? ''"
-                     @input="setField(path, $event.target.value)"
-                     placeholder="/uploads/...">
+              <div class="tf-image">
+                <div class="tf-image__preview" x-show="(getField(path) ?? '') !== ''">
+                  <img :src="getField(path)" :alt="name" loading="lazy">
+                </div>
+                <input type="text" class="tf-input tf-image__url"
+                       :value="getField(path) ?? ''"
+                       @input="setField(path, $event.target.value)"
+                       placeholder="/data/uploads/...">
+                <button type="button" class="btn tf-image__pick"
+                        @click="MSD.imagePicker.open().then(url => { if (url !== null) setField(path, url); })">Pick…</button>
+              </div>
             </template>
             <template x-if="def.type === 'string_ref'">
               <input type="text" class="tf-input" list="msd-string-keys-list"

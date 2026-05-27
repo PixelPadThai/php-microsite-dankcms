@@ -16,6 +16,7 @@ return [
     '#^/dashboard/api/manage-languages$#'    => 'dashboard/api/manage-languages.php',
     '#^/dashboard/api/upload-media$#'        => 'dashboard/api/upload-media.php',
     '#^/dashboard/api/delete-media$#'        => 'dashboard/api/delete-media.php',
+    '#^/dashboard/api/list-media$#'          => 'dashboard/api/list-media.php',
     '#^/dashboard/api/restore-backup$#'      => 'dashboard/api/restore-backup.php',
     '#^/dashboard(?:/(?<view>[\w-]+))?$#'    => 'dashboard/index.php',
     '#^/health\.json$#'              => 'health.php',

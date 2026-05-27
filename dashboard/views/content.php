@@ -47,6 +47,8 @@ foreach ($collections as $cname => $rows) {
 <script id="msd-string-keys"   type="application/json"><?= json_encode($stringKeys, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
 <script id="msd-ref-options"   type="application/json"><?= json_encode($refOptions, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
 
+<?php require __DIR__ . '/_partials/image-picker.php'; ?>
+
 <div x-data="{ tab: 'strings' }" x-cloak class="content-editor">
 
   <div class="content-tabs" role="tablist">
