@@ -8,7 +8,6 @@
 <style><?= Theme::cssScaleFromHex($cms->setting('brand_primary') ?? '#0CC4B4') ?></style>
 <link rel="stylesheet" href="/styles/site.css">
 <link rel="stylesheet" href="/styles/dashboard.css">
-<script src="/assets/js/alpine.min.js" defer></script>
 <script src="/assets/js/dashboard-init.js"></script>
 <script src="/assets/js/dashboard.js" defer></script>
 <script src="/assets/js/typedForm.js" defer></script>
@@ -16,6 +15,7 @@
 <script src="/assets/js/settingsView.js" defer></script>
 <script src="/assets/js/mediaLibrary.js" defer></script>
 <script src="/assets/js/imagePicker.js" defer></script>
+<script src="/assets/js/alpine.min.js" defer></script>
 </head>
 <body class="dash-body" x-data="{}">
 <aside class="dash-sidebar">

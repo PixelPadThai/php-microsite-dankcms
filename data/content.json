@@ -1,41 +1,90 @@
 {
-  "_meta": {
-    "schema_version": 1,
-    "languages": [
-      { "code": "en", "label": "English", "enabled": true,  "default": true },
-      { "code": "th", "label": "ไทย",     "enabled": false, "default": false }
-    ]
-  },
-  "_schemas": {
-    "settings": {
-      "site_name":     { "type": "string", "required": true },
-      "logo":          { "type": "image" },
-      "brand_primary": { "type": "color", "default": "#0CC4B4" },
-      "contact_email": { "type": "email" },
-      "_maintenance":  { "type": "boolean", "default": false },
-      "social": { "type": "object", "fields": {
-        "facebook":  { "type": "url" },
-        "instagram": { "type": "url" }
-      }}
+    "_meta": {
+        "schema_version": 1,
+        "languages": [
+            {
+                "code": "en",
+                "label": "English",
+                "enabled": true,
+                "default": true
+            },
+            {
+                "code": "th",
+                "label": "ไทย",
+                "enabled": false,
+                "default": false
+            }
+        ]
     },
-    "pages": {
-      "id":         { "type": "string", "primary": true },
-      "slug":       { "type": "string", "required": true },
-      "title_key":  { "type": "string_ref" },
-      "published":  { "type": "boolean", "default": false }
+    "_schemas": {
+        "settings": {
+            "site_name": {
+                "type": "string",
+                "required": true
+            },
+            "logo": {
+                "type": "image"
+            },
+            "brand_primary": {
+                "type": "color",
+                "default": "#0CC4B4"
+            },
+            "contact_email": {
+                "type": "email"
+            },
+            "_maintenance": {
+                "type": "boolean",
+                "default": false
+            },
+            "social": {
+                "type": "object",
+                "fields": {
+                    "facebook": {
+                        "type": "url"
+                    },
+                    "instagram": {
+                        "type": "url"
+                    }
+                }
+            }
+        },
+        "pages": {
+            "id": {
+                "type": "string",
+                "primary": true
+            },
+            "slug": {
+                "type": "string",
+                "required": true
+            },
+            "title_key": {
+                "type": "string_ref"
+            },
+            "published": {
+                "type": "boolean",
+                "default": false
+            }
+        }
+    },
+    "settings": {
+        "site_name": "My Site",
+        "logo": "",
+        "brand_primary": "#FEBC86",
+        "contact_email": "",
+        "_maintenance": false,
+        "social": {
+            "facebook": "",
+            "instagram": ""
+        }
+    },
+    "collections": {
+        "pages": [
+            {
+                "id": "home",
+                "slug": "/",
+                "title_key": "home_title",
+                "published": true
+            }
+        ]
     }
-  },
-  "settings": {
-    "site_name": "My Site",
-    "logo": "",
-    "brand_primary": "#0CC4B4",
-    "contact_email": "",
-    "_maintenance": false,
-    "social": { "facebook": "", "instagram": "" }
-  },
-  "collections": {
-    "pages": [
-      { "id": "home", "slug": "/", "title_key": "home_title", "published": true }
-    ]
-  }
 }
